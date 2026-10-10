@@ -1,0 +1,165 @@
+/* ── Page background ─────────────────────────────── */
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 8% 10%, rgba(188, 231, 174, 0.62), transparent 42%),
+    radial-gradient(ellipse at 82% 8%, rgba(247, 207, 183, 0.62), transparent 42%),
+    #EAE6DC;
+}
+
+/* ── Hero section ────────────────────────────────── */
+.hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 88px 32px 68px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--vd-text-secondary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 5px 14px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--vd-border-muted);
+}
+
+.headline {
+  font-size: clamp(34px, 6vw, 58px);
+  font-weight: 800;
+  color: var(--vd-text);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+  margin: 0 0 22px;
+}
+
+.description {
+  font-size: 16px;
+  color: var(--vd-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 38px;
+  font-weight: 400;
+}
+
+.ctas {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Roles section ───────────────────────────────── */
+.roles {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 32px 88px;
+}
+
+.rolesHeading {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--vd-text);
+  margin: 0 0 40px;
+  letter-spacing: -0.03em;
+}
+
+.rolesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.roleCard {
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: var(--radius-card);
+  padding: 28px 24px;
+  border: 1px solid rgba(224, 226, 227, 0.7);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+.roleCard:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.roleIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  background: var(--vd-card);
+  border: 1px solid var(--vd-border-subtle);
+}
+
+.roleCard h3 {
+  margin: 0 0 9px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--vd-text);
+  letter-spacing: -0.02em;
+}
+
+.roleCard p {
+  font-size: 13.5px;
+  color: var(--vd-text-secondary);
+  line-height: 1.65;
+  margin: 0 0 16px;
+  font-weight: 400;
+}
+
+.roleLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--vd-text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  border-bottom: 1.5px solid var(--vd-border-muted);
+  padding-bottom: 1px;
+  transition: opacity var(--transition-fast);
+}
+.roleLink:hover { opacity: 0.7; }
+
+/* ── CTA footer section ──────────────────────────── */
+.ctaSection {
+  text-align: center;
+  padding: 64px 32px;
+  background: rgba(255, 255, 255, 0.48);
+  border-top: 1px solid rgba(224, 226, 227, 0.6);
+}
+
+.ctaSection h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--vd-text);
+  margin: 0 0 10px;
+  letter-spacing: -0.03em;
+}
+
+.ctaSection p {
+  font-size: 14px;
+  color: var(--vd-text-secondary);
+  margin: 0 0 30px;
+  font-weight: 400;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 767px) {
+  .hero       { padding: 52px 20px 44px; }
+  .roles      { padding: 28px 16px 52px; }
+  .rolesGrid  { grid-template-columns: 1fr; gap: 12px; }
+  .ctaSection { padding: 44px 20px; }
+}

@@ -1,0 +1,154 @@
+/* ── Page wrapper ────────────────────────────────── */
+.page { max-width: 1100px; }
+
+/* ── Header ──────────────────────────────────────── */
+.header { margin-bottom: 30px; }
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--vd-text);
+  margin: 0 0 5px;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.subtitle {
+  font-size: 13.5px;
+  color: var(--vd-text-secondary);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ── Sections ────────────────────────────────────── */
+.section { margin-bottom: 26px; }
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--vd-text);
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--vd-text-secondary);
+}
+
+/* ── Metrics grid ────────────────────────────────── */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* ── Cards ───────────────────────────────────────── */
+.card {
+  background: var(--vd-card-strong);
+  border-radius: var(--radius-card);
+  padding: 22px 24px;
+  border: 1px solid var(--vd-border-muted);
+  box-shadow: var(--shadow-card);
+}
+
+/* ── Status mini-grid ────────────────────────────── */
+.statusGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 8px;
+}
+
+.statusItem {
+  background: var(--vd-card);
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--vd-border-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statusLabel {
+  font-size: 10.5px;
+  color: var(--vd-text-secondary);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.statusValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--vd-text);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+/* ── List card ───────────────────────────────────── */
+.listCard {
+  background: var(--vd-card-strong);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--vd-border-muted);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.listRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 20px;
+  border-bottom: 1px solid var(--vd-border-subtle);
+  transition: background var(--transition-fast);
+}
+.listRow:last-child { border-bottom: none; }
+.listRow:hover { background: rgba(0,0,0,0.018); }
+
+.listTitle {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--vd-text);
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.01em;
+}
+
+.listMeta {
+  font-size: 11.5px;
+  color: var(--vd-text-secondary);
+  white-space: nowrap;
+}
+
+/* ── Prompt / empty-action card ─────────────────── */
+.promptCard {
+  background: rgba(78, 201, 138, 0.06);
+  border: 1px dashed rgba(78, 201, 138, 0.5);
+  border-radius: var(--radius-card);
+  padding: 28px 24px;
+  text-align: center;
+}
+.promptCard p {
+  font-size: 13.5px;
+  color: var(--vd-text-secondary);
+  margin: 0 0 16px;
+}
+
+/* ── Action row ──────────────────────────────────── */
+.actionRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 1023px) {
+  .metricsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .title       { font-size: 26px; }
+  .metricsGrid { grid-template-columns: repeat(2, 1fr); }
+}

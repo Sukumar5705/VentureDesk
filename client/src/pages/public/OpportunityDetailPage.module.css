@@ -1,0 +1,82 @@
+﻿.page {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 5% 5%, rgba(188,231,174,0.4), transparent 35%),
+    radial-gradient(ellipse at 85% 5%, rgba(247,207,183,0.4), transparent 35%), #eee9df;
+}
+.main { max-width: 1100px; margin: 0 auto; padding: 32px 32px 64px; }
+
+.backLink {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--vd-text-secondary); text-decoration: none;
+  margin-bottom: 28px; font-weight: 500;
+  transition: color var(--transition-fast);
+}
+.backLink:hover { color: var(--vd-text); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: start;
+}
+
+.card {
+  background: var(--vd-card-strong);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  border: 1px solid var(--vd-border-muted);
+  box-shadow: var(--shadow-card);
+}
+
+.badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.industryBadge, .stageBadge {
+  font-size: 11px; font-weight: 600; padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+.industryBadge { background: rgba(136,182,245,0.15); color: var(--vd-blue); }
+.stageBadge { background: rgba(101,217,149,0.15); color: var(--vd-green); }
+
+.title { font-size: 28px; font-weight: 700; color: var(--vd-text); margin: 0 0 6px; line-height: 1.2; }
+.startupName { font-size: 14px; color: var(--vd-text-secondary); margin: 0 0 16px; }
+
+.metaRow { display: flex; gap: 16px; flex-wrap: wrap; padding: 12px 0; border-top: 1px solid var(--vd-border-muted); border-bottom: 1px solid var(--vd-border-muted); margin-bottom: 24px; }
+.metaItem { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--vd-text-secondary); font-weight: 500; }
+
+.section { margin-bottom: 24px; }
+.section h2 { font-size: 16px; font-weight: 600; color: var(--vd-text); margin: 0 0 10px; }
+.section p { font-size: 14px; color: var(--vd-text-secondary); line-height: 1.7; margin: 0; }
+
+.websiteLink {
+  display: inline-block; margin-top: 8px;
+  font-size: 13px; font-weight: 600; color: var(--vd-text); text-decoration: none;
+  border-bottom: 1px solid var(--vd-border-muted);
+}
+
+.ctaCard {
+  background: var(--vd-card-strong); border-radius: var(--radius-card);
+  padding: 24px; border: 1px solid var(--vd-border-muted); box-shadow: var(--shadow-card);
+  position: sticky; top: 80px;
+}
+.fundingLabel { font-size: 12px; color: var(--vd-text-secondary); margin-bottom: 4px; }
+.fundingAmount { font-size: 28px; font-weight: 700; color: var(--vd-text); margin-bottom: 4px; }
+.publishedAt { font-size: 12px; color: var(--vd-text-secondary); margin-bottom: 20px; }
+
+.sentMsg {
+  padding: 12px; border-radius: 10px; background: rgba(101,217,149,0.15);
+  color: var(--vd-green); font-weight: 600; font-size: 14px; text-align: center;
+}
+
+.inquiryForm { display: flex; flex-direction: column; gap: 8px; }
+.charCount { font-size: 11px; color: var(--vd-text-secondary); text-align: right; }
+.formBtns { display: flex; gap: 8px; }
+
+.notFound { text-align: center; padding: 80px 32px; }
+.notFound h2 { font-size: 24px; margin-bottom: 12px; }
+.notFound p { color: var(--vd-text-secondary); margin-bottom: 24px; }
+
+@media (max-width: 767px) {
+  .main { padding: 16px 16px 48px; }
+  .layout { grid-template-columns: 1fr; }
+  .ctaCard { position: static; }
+  .title { font-size: 22px; }
+}

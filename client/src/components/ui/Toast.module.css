@@ -1,0 +1,52 @@
+﻿.container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 9999;
+  max-width: 360px;
+  width: calc(100vw - 48px);
+}
+
+.toast {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  animation: slideIn 200ms ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.success { background: var(--vd-green); color: #0a2e1a; }
+.error { background: var(--vd-red); color: #fff; }
+.warning { background: var(--vd-amber); color: #3d2a00; }
+
+.icon { flex-shrink: 0; margin-top: 1px; }
+.message { flex: 1; line-height: 1.4; }
+
+.close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  opacity: 0.7;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  transition: opacity var(--transition-fast);
+}
+.close:hover { opacity: 1; }
+.close:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }

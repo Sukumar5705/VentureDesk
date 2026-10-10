@@ -1,0 +1,219 @@
+/* ── Sidebar shell ───────────────────────────────── */
+.sidebar {
+  width: 268px;
+  height: 100%;
+  background: var(--vd-sidebar);
+  display: flex;
+  flex-direction: column;
+  padding: 26px 14px 20px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ── Brand / logo ────────────────────────────────── */
+.brand {
+  padding: 0 8px;
+  margin-bottom: 30px;
+}
+
+/* ── Navigation ──────────────────────────────────── */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-pill);
+  color: rgba(238, 240, 241, 0.55);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+  position: relative;
+}
+
+.navItem:hover {
+  background: var(--vd-sidebar-hover);
+  color: rgba(238, 240, 241, 0.88);
+}
+
+.navItem.active {
+  background: var(--vd-sidebar-active);
+  color: var(--vd-text-on-active);
+  font-weight: 600;
+}
+
+.navIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 18px;
+}
+
+/* ── Bottom user section ─────────────────────────── */
+.bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 8px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  margin-top: 16px;
+}
+
+.userRow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1;
+  min-width: 0;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--vd-green);
+  color: #0a2e1a;
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0;
+}
+
+.userMeta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 1px;
+}
+
+.userName {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--vd-text-on-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.01em;
+}
+
+.userRole {
+  font-size: 10.5px;
+  color: rgba(238, 240, 241, 0.42);
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+}
+
+.logoutBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(238, 240, 241, 0.38);
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: color var(--transition-fast), background var(--transition-fast);
+  flex-shrink: 0;
+}
+.logoutBtn:hover {
+  color: var(--vd-text-on-dark);
+  background: rgba(255, 255, 255, 0.08);
+}
+.logoutBtn:focus-visible {
+  outline: 2px solid var(--vd-green);
+  outline-offset: 2px;
+}
+
+/* ── Desktop wrapper ─────────────────────────────── */
+.desktopSidebar {
+  /* Use display:contents so the sidebar itself flex-stretches inside frame */
+  height: 100%;
+}
+
+/* ── Mobile hamburger ────────────────────────────── */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 200;
+  background: var(--vd-sidebar);
+  border: none;
+  color: var(--vd-text-on-dark);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-floating);
+}
+.hamburger:focus-visible {
+  outline: 2px solid var(--vd-green);
+  outline-offset: 2px;
+}
+
+.mobileOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 300;
+  backdrop-filter: blur(2px);
+}
+
+.mobileDrawer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: -290px;
+  width: 268px;
+  height: 100%;
+  z-index: 400;
+  transition: left var(--transition-medium);
+}
+
+.mobileDrawerOpen {
+  left: 0;
+}
+
+.closeDrawer {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: -46px;
+  background: var(--vd-sidebar);
+  border: none;
+  color: var(--vd-text-on-dark);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 401;
+  box-shadow: var(--shadow-floating);
+}
+
+/* ── Mobile breakpoint ───────────────────────────── */
+@media (max-width: 767px) {
+  .desktopSidebar { display: none; }
+  .hamburger      { display: flex; }
+  .mobileOverlay  { display: block; }
+  .mobileDrawer   { display: block; }
+  .closeDrawer    { display: flex; }
+}

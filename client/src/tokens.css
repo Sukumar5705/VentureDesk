@@ -1,0 +1,103 @@
+/* VentureDesk Design Tokens — v2 */
+:root {
+  /* ── Colors ──────────────────────────────────────────── */
+  --vd-sidebar:          #13181C;
+  --vd-sidebar-muted:    #252D33;
+  --vd-sidebar-hover:    rgba(255,255,255,0.06);
+  --vd-sidebar-active:   rgba(255,255,255,0.95);
+
+  --vd-workspace:        #EBEBEB;
+  --vd-card:             #F5F5F5;
+  --vd-card-strong:      #FFFFFF;
+
+  --vd-text:             #0F1417;
+  --vd-text-secondary:   #6B7177;
+  --vd-text-tertiary:    #9FA4A9;
+  --vd-text-on-dark:     #EEF0F1;
+  --vd-text-on-active:   #0F1417;
+
+  --vd-border:           rgba(255,255,255,0.9);
+  --vd-border-muted:     #E0E2E3;
+  --vd-border-subtle:    #ECEEF0;
+
+  /* ── Brand accent ────────────────────────────────────── */
+  --vd-green:            #4EC98A;
+  --vd-green-soft:       #9EEB72;
+  --vd-green-dim:        rgba(78,201,138,0.12);
+  --vd-mint:             #D3EFC4;
+
+  /* ── Semantic / chart colors ─────────────────────────── */
+  --vd-coral:            #F0898A;
+  --vd-peach:            #F8A87C;
+  --vd-yellow:           #EFD06A;
+  --vd-red:              #D04D44;
+  --vd-amber:            #E3AF47;
+  --vd-blue:             #7EB0F2;
+  --vd-purple:           #A27BF6;
+  --vd-orange:           #F78A30;
+
+  /* ── Status colors ───────────────────────────────────── */
+  --status-draft:        #9CA3AF;
+  --status-pending:      #E3AF47;
+  --status-changes:      #F78A30;
+  --status-approved:     #4EC98A;
+  --status-rejected:     #D04D44;
+
+  /* ── Inquiry status colors ───────────────────────────── */
+  --inquiry-new:         #9CA3AF;
+  --inquiry-contacted:   #7EB0F2;
+  --inquiry-meeting:     #E3AF47;
+  --inquiry-diligence:   #A27BF6;
+  --inquiry-won:         #4EC98A;
+  --inquiry-lost:        #D04D44;
+
+  /* ── Radius scale ────────────────────────────────────── */
+  --radius-frame:        30px;
+  --radius-card:         22px;
+  --radius-metric:       18px;
+  --radius-inner:        12px;
+  --radius-input:        10px;
+  --radius-pill:         999px;
+
+  /* ── Shadows ─────────────────────────────────────────── */
+  --shadow-card:         0 1px 4px rgba(15,20,23,0.04), 0 4px 12px rgba(15,20,23,0.03);
+  --shadow-floating:     0 8px 32px rgba(15,20,23,0.10), 0 2px 8px rgba(15,20,23,0.06);
+  --shadow-popup:        0 4px 24px rgba(15,20,23,0.14);
+  --shadow-card-hover:   0 4px 16px rgba(15,20,23,0.08), 0 8px 32px rgba(15,20,23,0.06);
+
+  /* ── Spacing (4px base) ──────────────────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+
+  /* ── Typography ──────────────────────────────────────── */
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Type scale */
+  --text-xs:   11px;
+  --text-sm:   13px;
+  --text-base: 14px;
+  --text-md:   15px;
+  --text-lg:   18px;
+  --text-xl:   22px;
+  --text-2xl:  28px;
+  --text-3xl:  36px;
+  --text-4xl:  42px;
+
+  /* Font weights */
+  --fw-normal:    400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-extrabold: 800;
+
+  /* ── Transitions ─────────────────────────────────────── */
+  --transition-fast:   150ms ease;
+  --transition-medium: 220ms ease;
+  --transition-slow:   320ms ease;
+}
